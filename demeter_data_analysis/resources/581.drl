@@ -1,0 +1,63 @@
+# File Xif : ./tests/dico_dmt_n1_1131.xif
+#    Modeller version : 6.3
+#    Schema version : 
+# API OASIS : 
+#    Modeller version : 8.4.1
+#    Schema version : 3.1
+# --- STARTING XIF PARSING ---
+# -> Model name = dico_dmt_n1_1131.xif
+# -> Numbers of roots = 1
+
+FILE "dico_dmt_n1_1131.xif" BINARY BIG_ENDIAN CHARSET "ISO-8859-1";
+
+ROW "DEMETER / ICE : Description of a DMT_N1_1131 datafile (Waveform of the VLF Electric Field)."
+   DATE   				DATE_CCSDS[8] 	"CCSDS Formatted Date",
+   YEAR                 USHORT 	"Year of date",
+   MONTH                USHORT 	"Month of year",
+   DAY                  USHORT 	"Day of month",
+   HOUR                 USHORT 	"Hour of time",
+   MINUTE               USHORT 	"Minute of time",
+   SECOND               USHORT 	"Second of time",
+   MILLISECOND          USHORT 	"Millisecond of time",
+   ORBIT_NUMBER         USHORT 	"Orbit number",
+   SUB_ORBIT_TYPE       USHORT 	"Sub orbit type : 0=downward ; 1= upward",
+   TM_STATION           STRING[8] 	"Telemetry station : 'TOULOUSE'",
+   SFT_VERSION          UBYTE 	"Version (edition number) of the processing software : from 0 to 9",
+   SFT_SUB_VERSION      UBYTE 	"Sub-version (revision number) of the processing software : from 0 to 9",
+   CAL_VERSION          UBYTE 	"Version (edition number) of the calibration file : from 0 to 9",
+   CAL_SUB_VERSION      UBYTE 	"Sub-version (revision number) of the calibration file : from 0 to 63",
+   GEOC_LAT             FLOAT 	"Geocentric latitude (-90° , +90°)",
+   GEOC_LONG            FLOAT 	"Geocentric longtitude (0° , 360°)",
+   ALTITUDE             FLOAT 	"Altitude",
+   LOCAL_TIME           FLOAT 	"Local time of the first point of the data array (0 , 24 h)",
+   GEOMAG_LAT           FLOAT 	"Geomagnetic latitude (-90° , +90°)",
+   GEOMAG_LONG          FLOAT 	"Geomagnetic longitude (0° , +360°)",
+   MLT                  FLOAT 	"Magnetic local time of the first point",
+   INV_LAT              FLOAT 	"Invariant latitude (-90° , +90°).",
+   MC_ILWAIN_L          FLOAT 	"Mc Ilwain parameter L (0 , 999)",
+   CONJSAT_GEOC_LAT     FLOAT 	"Geocentric latitude of the conjugate point at the satellite altitude (-90° , +90°).",
+   CONJSAT_GEOC_LONG    FLOAT 	"Geocentric longitude of the conjugate point at the satellite altitude (0° , +360°).",
+   NCONJ110_GEOC_LAT    FLOAT 	"Geocentric latitude of North conjugate point at  altitude 110 km (-90° , +90°).",
+   NCONJ110_GEOC_LONG   FLOAT 	"Geocentric longitude of North conjugate point at  altitude 110 km (0° , +360°).",
+   SCONJ110_GEOC_LAT    FLOAT 	"Geocentric latitude of South conjugate point at  altitude 110 km (-90° , +90°).",
+   SCONJ110_GEOC_LONG   FLOAT 	"Geocentric longitude of South conjugate point at  altitude 110 km (0° , +360°).",
+   COMPONENT            FLOAT 	REPEAT 3 	"Component (X, Y, Z) of the magnetic field model",
+   GYROFREQ             FLOAT 	"Proton gyrofrequency at the satellite point",
+   SOLAR_POSITION       FLOAT 	REPEAT 3 	"Position components (Xs, Ys, Zs) ",
+   SFT_VERSION_1        UBYTE 	"Version (edition number) of the processing software : from 0 to 9",
+   SFT_SUB_VERSION_1    UBYTE 	"Sub version (revision number) of the processing software : from 0 to 9",
+   A_IJ                 FLOAT 	REPEAT 9 	"Element of matrix M_SAT2GEO",
+   B_IJ                 FLOAT 	REPEAT 9 	"Element of matrix M_GEO2LGM",
+   QUALITY              USHORT 	"Quality index of the attitude parameters : <br> 0 = attitude not available (matrix coefficients = 99999.)<br> 1 = measured attitude (very rare occurrence)<br> 2 = computed attitude (normal occurrence)",
+   SFT_VERSION_2        UBYTE 	"Version (edition number) of the processing software : from 0 to 9",
+   SFT_SUB_VERSION_2    UBYTE 	"Sub-version (revision number) of the processing software : from 0 to 9",
+   DATA_TYPE            STRING[21] 	"Data type : 'VLF ELECTRIC WAVEFORM'",
+   HK                   UBYTE 	REPEAT 32 	"Element of HK_TABLE",
+   COORD_SYST           STRING[9] 	"Data coordinate system : 'Sensor    '",
+   DATA_UNIT            STRING[16] 	"Data unit : 'µV/m'",
+   FREQ                 FLOAT 	"Sampling frequency (40000. Hz)",
+   NS                   USHORT 	"Sample data number per component : 8192",
+   T_DUR                FLOAT 	"Time duration of one data array : 8192 / 40000",
+   NAM1C                STRING[3] 	"Component name :  'Eij', i, j are the sensor numbers.",
+   WF1                  FLOAT 	REPEAT 8192 	"Element of WF1_TABLE"
+;
